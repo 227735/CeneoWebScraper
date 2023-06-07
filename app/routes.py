@@ -1,11 +1,22 @@
 from app import app
+from flask import render_template, request, redirect, url_for
 
 @app.route("/")
 @app.route("/index")
 def index():
-    return "Hello World!"
+    return render_template("index.html")
 
-@app.route("/name/", defaults={"name": "Anonim"})
-@app.route("/name/<name>")
-def name(name):
-    return f"Hello, {name}!"
+@app.route("/product/<code>")
+def product(code):
+    return render_template("product.html", product_code=code)
+
+@app.route("/products")
+def products():
+    return render_template("products.html")
+
+@app.route("/extracts",mehods=["POST", "GET"])
+def extract():
+    if request.method == "POST":
+        product_code = request.form.get("product_code")
+        return redirect(url_for("product", code=product_code))
+    return render_template("extract.html")

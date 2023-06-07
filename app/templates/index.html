@@ -1,34 +1,8 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8"><script>/* <![CDATA[ */ ringDataLayer = {"context":{"variant":{"accelerator":"ZG93bmxvYWQucG9jenRhLm9uZXQucGw6OnByb2Rfd2l0aF91c2VyX2RhdGFfZG93bmxvYWRlcl9pbl9hd3M="}}}; /* ]]> */</script><script>/* <![CDATA[ */ accConf = {"events":{"endpointPaths":["/a8f4d8cd95e164917035b64b867a45dd"]}}; /* ]]> */</script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CeneoWebScraper</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  </head>
 
-  <body style="background-color: lightyellow"> 
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-                <span class="navbar-brand text-white h3">Ceneo Web Scraper</span>
-            <li class="nav-item active">
-              <a  class="nav-link text-white" href="index.html">Strona Główna</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="extract.html">Ekstrakcja opinii</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="products.html">Lista produktów</a>
-              </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="author.html">O autorze</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+{% extends 'base.html' %}
+{% block title %}Opis projektu{% endblock %}
+{% block content %}
 
-    <br>
     <div class="text-center">
       <h3>Cel aplikacji</h3>        
         <p>
@@ -63,14 +37,12 @@
           <li>flask</li>      
         </ul>
     </div>
-
-
-  </body>
-
   <footer class="text-center text-white fixed-bottom">
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       Monika Kłosowska, Uniwersytet Ekonomiczny w Krakowie
     </div>
   </footer>
-
+  </body>
 </html>
+
+{% endblock %}
