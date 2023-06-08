@@ -14,9 +14,13 @@ def product(code):
 def products():
     return render_template("products.html")
 
-@app.route("/extracts",mehods=["POST", "GET"])
+@app.route("/extract", methods=['POST', 'GET'])
 def extract():
-    if request.method == "POST":
+    if request.method == 'POST':
         product_code = request.form.get("product_code")
         return redirect(url_for("product", code=product_code))
     return render_template("extract.html")
+
+@app.route("/author")
+def author():
+    return render_template("author.html")
